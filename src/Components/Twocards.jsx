@@ -23,7 +23,7 @@ const Twocards = () => {
           <div className="paragraph-text">
             <span>
               “You have 2 choices: Become Prepared to Protect your family and to
-              teach them how to protect themselves. Be Unprepared and use "HOPE"
+              teach them how to protect themselves. Be Unprepared and use HOPE
               as a Strategy.”
             </span>
           </div>

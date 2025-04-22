@@ -1,11 +1,6 @@
-import React from "react";
 import Arrow from "../assets/arrow.png";
 import Rectangle52 from "../assets/Rectangle52.png";
 import Rectangle58 from "../assets/Rectangle58.png";
-import Girlpic from "../assets/Girlpic.png";
-import Rectangle63 from "../assets/Rectangle63.png";
-import Rectangle64 from "../assets/Rectangle64.png";
-import Rectangle62 from "../assets/Rectangle62.png";
 
 function criticalSection() {
   return (
@@ -57,12 +52,12 @@ function criticalSection() {
       <div className="maindiv">
         <div className="child-div">
           <span>
-            In today's fast-paced and ever-evolving world, staying safe has
+            In todays fast-paced and ever-evolving world, staying safe has
             become more complex than ever before.
           </span>
 
           <span>
-            It's not just about protecting ourselves from traditional threats
+            Its not just about protecting ourselves from traditional threats
             like gun violence, kidnappings, or drug-related issues.
           </span>
 
@@ -79,47 +74,6 @@ function criticalSection() {
           <img src={Rectangle58} className="rectangle58" alt="" />
         </div>
       </div>
-
-      {/* -----------another div  card div----------- */}
-
-      {/* <div className="big-div">
-        <p className="big-divp">
-          Empower Yourself: <br /> Navigating Personal <br /> Safety Risks in{" "}
-          <br />
-          Today's World
-        </p>
-        <div className="sub-bigdiv">
-          <span>
-            From workplace harassment to sexual harassment, peer pressure, and
-            other forms of personal safety risks, our communities face a wide
-            range of potential dangers
-          </span>
-          <span>
-            These threats can impact people of all ages, backgrounds, and walks
-            of life.
-          </span>
-          <span>
-            It's crucial that we equip ourselves with the knowledge and skills
-            necessary to navigate these risks effectively.
-          </span>
-        </div>
-        <img src={Girlpic} className="girlpic" alt="" />
-        ------images attached with upper left and lower right corner-----
-        <img src={Rectangle63} alt="" className="rectangleimg1" />
-        <img src={Rectangle64} alt="" className="rectangleimg2" />
-        -----------making 2nd part of card--------------
-        <div className="childcontent">
-          <p>
-            To not only respond with focus and a lack of panic, but also to be
-            aware of and avoid these kinds of modern day threats, it takes a
-            program that focuses on more than just the traditional training
-            methods.
-          </p>
-          <img src={Rectangle62} alt="" className="rectangle62" />
-          <img src={Rectangle63} alt="" className="rectangleimg3" />
-          <img src={Rectangle64} alt="" className="rectangleimg4" />
-        </div>
-      </div> */}
     </div>
   );
 }

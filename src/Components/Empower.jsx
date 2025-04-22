@@ -1,4 +1,3 @@
-import React from "react";
 import Girlpic from "../assets/girlpic.png";
 import Rectangle62 from "../assets/Rectangle62.png";
 import Rectangle64 from "../assets/Rectangle64.png";
@@ -18,7 +17,7 @@ const Empower = () => {
             <div className="heading-p">
               <span className="heading-span ">
                 Empower Yourself: <br /> Navigating Personal <br />
-                Safety Risks in <br /> Today's World
+                Safety Risks in <br /> Todays World
               </span>
               <span className="para-span">
                 From workplace harassment to sexual harassment, peer pressure,
@@ -30,7 +29,7 @@ const Empower = () => {
                 walks of life.
               </span>
               <span className="para-span">
-                It's crucial that we equip ourselves with the knowledge and
+                Its crucial that we equip ourselves with the knowledge and
                 skills necessary to navigate these risks effectively.
               </span>
             </div>
