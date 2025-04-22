@@ -1,4 +1,3 @@
-import React from "react";
 
 const Thirdpage = () => {
   return (
@@ -29,13 +28,13 @@ const Thirdpage = () => {
           <div className="fourthp">
             <p>
               <span>
-                Brian Searcy's programs empower those with the knowledge,
+                Brian Searcys programs empower those with the knowledge,
                 skills, habits and situational awareness to be able to stay
                 ahead of potential threats as well as be in a better
               </span>
               <span>
                 Retired Col Brian Searcy joined the USAF in 1987, winning the
-                Commander's Trophy in May 1988 after graduating from
+                Commanders Trophy in May 1988 after graduating from
                 Undergraduate Navigator Training at Mather AFB. He worked as an
                 AWACS instructor before transitioning to the JSTARS cadre in
                 Melbourne Florida, then commanding the 608th Combat Operations
@@ -51,9 +50,7 @@ const Thirdpage = () => {
               </span>
             </p>
           </div>
-          {/* -----------adding pics on card of corners------- */}
-          {/* <img src={Rectangle63} alt="" className="rectangleimg5" />
-          <img src={Rectangle64} alt="" className="rectangleimg6" /> */}
+          
         </div>
       </div>
 
@@ -73,7 +70,7 @@ const Thirdpage = () => {
       <div className="curve">
         <div className="curvetext">
           <p>
-            TODAY’S TRAINING FAILS BY 
+            TODAY’S TRAINING FAILS BY
             <span className="yellowspan"> FOCUSING ON “RESPONDING”</span>
             <span className="whitespan">
               AFTER ONE’S FACEDWITH HARM OR THREAT. THE
