@@ -1,10 +1,4 @@
-import Arrow from "../assets/arrow.png";
-import Rectangle52 from "../assets/Rectangle52.png";
-import Rectangle58 from "../assets/Rectangle58.png";
-import Girlpic from "../assets/Girlpic.png";
-import Rectangle63 from "../assets/Rectangle63.png";
-import Rectangle64 from "../assets/Rectangle64.png";
-import Rectangle62 from "../assets/Rectangle62.png";
+
 
 const Secondpage = () => {
   return (
