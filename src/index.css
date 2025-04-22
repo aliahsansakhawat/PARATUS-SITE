@@ -1,0 +1,2810 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* <.....poppins font....> */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* kalam font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Bebas foont*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+
+/* ========css  for navbar section====== */
+
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.navbar {
+  position: fixed;
+  box-shadow: 0px 2px 05px 0px #000;
+
+  width: 100%;
+  background: #000000;
+  color: #000;
+  opacity: 0.85;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 28px;
+}
+
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+  width: 18%;
+
+}
+
+.menu-items li {
+  list-style: none;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19.5px;
+  letter-spacing: 0.05em;
+  /* text-align: left; */
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
+
+.navbar a {
+  color: #f9f2f2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #117964;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #000000;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    /* margin-left: -40px; */
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+    width: 20%;
+  }
+
+  .navbar-container input[type="checkbox"]:checked~.menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked~.logo {
+    display: none;
+  }
+}
+
+
+/* css for secondpage.jsx section============== */
+.hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./assets/BackgroundImage.png');
+  /* Path to the image in public folder */
+  background-size: cover;
+  /* Ensures the background covers the full screen */
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+}
+
+
+
+
+
+.first-text {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.2px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-top: 110px;
+
+
+}
+
+.secondtext {
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 52.5px;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  font-family: Kalam;
+  font-size: 115px;
+  font-weight: 700;
+  line-height: 150.31px;
+  text-align: center;
+  color: #f7c362;
+
+}
+
+.thirdtext {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.fourth-text1 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.78px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 60px;
+}
+
+.fourth-text {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.78px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.fifthtext {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 25px;
+}
+
+.fifthtext span {
+  font-family: Inter;
+  size: 18px;
+  font-weight: 600;
+  line-height: 21.78px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #f7c362;
+}
+
+.hero-content button {
+  border-radius: 37px;
+  padding: 11px 50px;
+  background-color: #F7C362;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border: #ffffff;
+  border: 10px;
+  cursor: pointer;
+  margin-top: 32px;
+
+}
+
+
+
+/* --------------css for secondpage.jsx component----------- */
+.background {
+  background-image:
+    url(C:\Users\pc\Desktop\office\page\test\src\assets\Rectangle6.png);
+  /* Path to the image in public folder */
+  background-size: cover;
+  /* Ensures the background covers the full screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+
+
+.background .content {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 89px 100px 0px 500px;
+
+}
+
+.arrowpic {
+  width: 70%;
+  height: 100%;
+  margin-right: 0px;
+  margin-left: auto;
+  /* This pushes the image to the right */
+
+}
+
+.arrowdata {
+
+  display: flex;
+  position: relative;
+}
+
+.arrowtext {
+  position: absolute;
+  right: 50px;
+  font-size: 46px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff;
+  align-self: center;
+  padding-top: 8px;
+}
+
+/*Css for below text of  arrow*/
+.below {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  size: 19px;
+  text-align: right;
+  margin-right: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 600px;
+  padding-top: 50px;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: end;
+  padding-top: 06%;
+  /* padding-left: 725px;
+    padding-top: 80px; */
+}
+
+input {
+  font-size: 16px;
+  width: 77.5vh;
+  height: 7vh;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  size: 14px;
+}
+
+.download {
+  width: 77.6vh;
+  padding: 13px;
+  color: #ffffff;
+  background-color: #3B3F63;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  border: #ffffff;
+  cursor: pointer;
+
+}
+
+/*Rectangle52.png image css a image looking like a lapton*/
+.rectangle52 {
+  width: 50%;
+  height: 70%;
+  margin-top: -07%
+}
+
+/*Hind font*/
+
+.belowform {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.9px;
+  text-align: center;
+  padding-top: 57px;
+}
+
+
+/* the text after (ARE YOU CONCERNED ABOUT THE SAFETY AND) css */
+.belowform1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 55px;
+  letter-spacing: -1px;
+  margin-top: 4px;
+  color: #3B3F63;
+  padding-top: 50px;
+  padding-bottom: 26px;
+}
+
+/* --------------------SPAN OF BELOWFORM1------------ */
+.belowform1 span {
+  color: #f3ab26;
+}
+
+
+.maindiv {
+  display: flex;
+  margin-left: 140px;
+  margin-right: 140px;
+  position: relative;
+  align-items: center;
+}
+
+/* Styling for child-div */
+.child-div {
+  width: 604px;
+  height: 386px;
+
+  padding-left: 33px;
+  border: 1.3px solid #777997;
+
+  padding-right: 123px
+}
+
+/* Styling for span inside child-div */
+.child-div span {
+  display: flex;
+  line-height: 26.5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
+  letter-spacing: 5%;
+  margin-top: 30px;
+
+}
+
+/* Styling for rectangle58 image */
+.rectangle58 {
+  top: 20px;
+  /* padding-top: 1.5%; */
+
+  position: absolute;
+  z-index: 2;
+  /* Make sure the image is above the child-div */
+  margin-left: -110px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+
+
+}
+
+
+
+/* Styling for readmore button */
+.readmorebtn {
+  width: 191px;
+  height: 47px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 36px;
+  background-color: #3B3F63;
+  border: none;
+  position: relative;
+  /* Keep it in normal flow */
+  z-index: 1;
+  color: #ffffff;
+  cursor: pointer;
+
+}
+
+/*====================== styling of empowers.jsx section=================== */
+.maincontainer {
+  align-items: center;
+  padding: 110px 137px 131px 144px;
+
+}
+
+.big-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #858585;
+
+}
+
+.child1 {
+  display: flex;
+  padding: 60px 65px 50px 17px;
+}
+
+.heading-p {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+}
+
+.big-div .heading-span {
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.heading-p .para-span {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+
+
+.girlpic-top {
+  position: absolute;
+
+
+}
+
+.girlpic-bottom {
+  position: relative;
+  bottom: 101px;
+  left: 434px;
+}
+
+.child2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.child2 .para-span2 {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  /* text-align: left; */
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 80%;
+  padding: 31px 62px 17px 50px;
+
+}
+
+.babyimgd {
+  padding-left: 10px;
+}
+
+.babypic {
+  width: 100%;
+}
+
+
+.babypic-top {
+  position: relative;
+  bottom: 292px;
+  right: 5px;
+}
+
+.babypic-bottom {
+  bottom: 92px;
+  position: relative;
+  left: 303px;
+}
+
+
+/* -------------css for thirdpage.jsx--------- */
+.maincard {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: center;
+  gap: 15px 15px;
+  margin-top: 150px;
+
+
+}
+
+.card {
+  position: relative;
+  border: 1px solid #3B3F63;
+  padding: 21px 27px 31px 48px;
+  width: 80%;
+  max-width: 100%;
+}
+
+.card::before {
+  content: url('./assets/Rectangle63.png');
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  height: 100%;
+  width: 100%;
+}
+
+.card::after {
+  content: url('./assets/Rectangle64.png');
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+}
+
+.brian {
+  position: relative;
+  writing-mode: vertical-rl;
+  /* Rotate text 90 degrees */
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #F4B031;
+  font-size: 141px;
+  letter-spacing: -7%;
+  line-height: 55%;
+}
+
+.brian p {
+  margin-left: 30px;
+}
+
+.brian .title-searcy {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+}
+
+.brian .title-brian {
+  position: absolute;
+  left: 18%;
+  top: 0;
+  transform: translate(50%, 0);
+}
+
+/* ----------------text styling with card-------- */
+
+
+/* -------------- 1st div styling in the card div ----------- */
+.card .firstp {
+  text-align: center;
+  padding: 39px 66px 10px 76px;
+
+}
+
+/* ----------------styling of the 1st p in the card div---------- */
+.card .firstp p {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  font-family: Poppins;
+  margin-top: 17px;
+}
+
+/* ------------styling of the 2nd div which contains second big p of card------  */
+.card .secondp {
+  margin-top: 15px;
+}
+
+/* ---------styling of the 2nd big p in the card------------- */
+.card .secondp p {
+  font-family: Hind;
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 55px;
+  margin-top: -2px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #3B3F63;
+
+}
+
+/* ------------styling of the span of 2nd p in the card------- */
+.card .secondp span {
+  color: #F4B031;
+}
+
+/* -------------styling of third p under the 2nd p------ */
+.thirdp {
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: 15px;
+}
+
+/* ------------styling of div of fourthp------- */
+.card .fourthp {
+  padding-left: 37px;
+  padding-right: 20px;
+  align-items: center;
+
+}
+
+/* --------styling of p inside the fourth div--------- */
+.card .fourthp p span {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 33px;
+  margin-top: 40px;
+  letter-spacing: 0.05em;
+  display: flex;
+  font-family: Poppins;
+  align-items: center;
+
+}
+
+/* ----------------styling of images on top left and low right corner on main card----- */
+/* --------------styling of images upon the rectangle62 image------ */
+.rectangleimg5 {
+  position: absolute;
+  width: 67px;
+  height: 63px;
+  margin-top: -875px;
+  margin-left: -63px;
+}
+
+.rectangleimg6 {
+  position: absolute;
+  width: 64px;
+  height: 61px;
+  margin-top: -16px;
+  margin-left: 753px;
+}
+
+ 
+
+.bluerectangle {
+  height: 100%;
+  margin-top: 129px;
+  border: 1px solid #3B3F63;
+  background-color: #3B3F63;
+  width: 99.8.5%;
+}
+
+/* ----------------------Adjustmant of div of white blue text----------- */
+
+
+
+/* ---------------styling of white and blue text-------- */
+
+.whitetext {
+  font-family: Poppins;
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 109px;
+  letter-spacing: -0.007em;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 202px;
+  margin-bottom: -10px;
+}
+
+/* --------------- span styling of white and blue text-------- */
+.bluetext {
+  color: #dfe0e7;
+  font-family: Poppins;
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 109px;
+  letter-spacing: -0.007em;
+  text-align: center;
+  align-content: center;
+  color: #3B3F63;
+}
+
+/* ---------------styling of div of yellow text unde the white blue text---------- */
+
+.yellowtext {
+
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0.09em;
+  text-align: center;
+  padding: 68px 300px 138px 300px;
+  color: #D7A034;
+}
+
+/* ---------------styling of yellow text unde the white blue text---------- */
+
+
+/* ------------------styling of curly div that have curly img named recatngle22------------- */
+.curve {
+  background-image: url(./assets/Rectangle22.png);
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+
+
+/* -----------styling of text inside curve div------- */
+.curve .curvetext {
+
+  padding: 160px 240px 80px 240px;
+
+
+}
+
+/* Optional: styling for the paragraph inside curvetext */
+.curvetext p {
+
+  font-family: Poppins;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  color: #ffffff;
+
+}
+
+.yellowspan {
+  font-family: Poppins;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #f3ab26;
+}
+
+.whitespan {
+  font-family: Poppins;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.divp2 {
+  padding: 30px 0px;
+
+  justify-self: center;
+
+
+}
+
+.divp2 .p2 {
+  color: #f3ab26;
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.09em;
+  text-align: center;
+}
+
+.whitespan2 {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.09em;
+  text-align: center;
+
+  display: flex;
+  color: #ffffff;
+
+}
+
+
+/* ----------------------css of twocards.jsx  page----------- */
+.section {
+
+  display: flex;
+  flex-direction: row;
+  padding: 0px 90px 90px 90px;
+}
+
+
+/* ------------------setting of rectangle27 img inside the section div------ */
+
+/* -------------styling of div right side of pic------ */
+
+.textmaindiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+
+/* -----------styling of heading------ */
+.headingdiv {
+  font-family: Poppins;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 55px;
+  letter-spacing: 0.09em;
+  text-align: left;
+  color: #f3ab26;
+
+
+}
+
+.headingdiv span {
+  color: #3B3F63;
+  display: flex;
+
+}
+
+/* -------styling of p------ */
+
+
+.paragraph-text {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 275;
+  line-height: 39px;
+  letter-spacing: 0.05em;
+  text-align: left;
+
+}
+
+.paragraph-text span {
+  color: #000000;
+  display: flex;
+
+}
+
+/* -------styling of click here yellow btn----- */
+.clickhere button {
+  padding: 16px 16px;
+  cursor: pointer;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21.78px;
+  letter-spacing: 0.05em;
+  background-color: #f3ab26;
+  color: #ffffff;
+  border: none;
+
+
+
+}
+
+
+/* -----------------css for threecards.jsx file/page................. */
+
+
+.cardsmain {
+  background-image: url(./assets/Rectangle33.png);
+
+}
+
+/* ----div for styling text----- */
+.uppercardtext {
+  padding-top: 55px;
+}
+
+.uppercardtext p {
+  font-family: Poppins;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+.id {
+  display: flex;
+  justify-content: space-around;
+  color: #faf8f8;
+}
+
+
+.threecards {
+  display: flex;
+  flex-direction: row;
+}
+
+.id .ioperson {
+  width: 45px;
+  height: 45px;
+}
+
+.threecards .firstcards {
+  background-color: #ffffff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 39px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin: 0.5%;
+  padding: 50px 35px 50px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.spantext {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.firstcards .spans {
+  padding-top: 20%;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3B3F63;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ---------STYLING OF TESTIMONIALS BUTTON--------- */
+.testimonials {
+  display: flex;
+  justify-content: center;
+  padding-top: 62px;
+}
+
+.testimonials button {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #f3ab26;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.2px;
+  letter-spacing: 0.05em;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  border: 10px solid #ffd68980;
+}
+
+.associations {
+  align-items: center;
+  color: #ffffff;
+  font-family: Heebo;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: 3%;
+  padding-bottom: 2%;
+
+}
+
+
+/* ---------CSSS FOR GET STARTED.JSX PAGE---------- */
+.tex {
+  font-family: Poppins;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 109px;
+  text-align: center;
+  margin-top: 4%;
+  color: #3B3F63;
+}
+
+.tex span {
+  color: #D7A034;
+
+}
+
+.tex .hr1 {
+  border-top: 1px solid #000;
+  margin-top: 2%;
+  width: 70%;
+  border-color: #B1AFAF;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* styling of a section named row */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+/* styling of the first div */
+.textdiv {
+  font-family: Poppins;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 49px;
+  text-align: center;
+  color: #3B3F63;
+  display: flex;
+  flex-direction: column;
+  padding: 3% 2% 3%;
+}
+
+/* styling of the .spans */
+
+.textdiv span {
+  font-family: Poppins;
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 49px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
+
+.textdiv .yellowt {
+  font-family: Poppins;
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 50px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #D7A034;
+
+}
+
+.textdiv .bluet {
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 31px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
+
+
+/* styling of the 2nd div*/
+
+.textbtn {
+  font-family: Poppins;
+  font-size: 9px;
+  font-weight: 275;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 70vh;
+  margin-top: 6%;
+  margin-left: 4%;
+
+}
+
+.yellowbtn {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+  background-color: #F0AE32;
+  border: 10px solid #ffd68980;
+
+  padding: 16px;
+  border-radius: 100px;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+/* stlying of the line horizontal ::-webkit-slider-runnable-track */
+.hr1 {
+  border-top: 1px solid #000;
+  margin-top: 0%;
+  width: 70%;
+  border-color: #B1AFAF;
+  margin-top: 4%;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* STYLING OF SECOND PART---------------- */
+/* CSS STYLING FOR THE MAIN  2nd section DIV STARTS FROM here------ */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* STYLING OF THE FIRST DIV-------- */
+
+.textdiv2 {
+  font-family: Poppins;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 62px;
+  text-align: center;
+  color: #3B3F63;
+  display: flex;
+  flex-direction: column;
+  padding: 1% 1% 5% 0%;
+  margin-top: 5%;
+
+
+
+}
+
+.textdiv2 span {
+  color: #F0AE32;
+  font-family: Poppins;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 57px;
+  text-align: center;
+
+
+}
+
+.textdiv2 .bluesmallspan {
+  font-family: Poppins;
+  font-size: 39px;
+  font-weight: 800;
+  line-height: 42px;
+  text-align: center;
+  color: #3B3F63;
+
+
+}
+
+/* STYLING OF THE 2nd DIV-------- */
+
+.textbtn2 {
+  font-family: Poppins;
+  font-size: 9px;
+  font-weight: 275;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 70vh;
+  margin-top: 2%;
+  margin-left: 2%;
+
+}
+
+.yellowbtn2 {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+  background-color: #F0AE32;
+  border: 10px solid #ffd68980;
+  padding: 16px;
+  border-radius: 100px;
+  margin-top: 7%;
+
+}
+
+/* ================css for lastpage.jsx=============== */
+
+.rectangle35 {
+  background-image:
+    linear-gradient(rgba(59, 63, 99, 0.5),
+      /* Apply 50% opacity to the color #3B3F63 */
+      rgba(59, 63, 99, 0.5)
+      /* Ensure the gradient effect is consistent */
+    ),
+    url(C:\Users\pc\Desktop\office\page\test\src\assets\Rectangle35.png);
+  /* Path to the background image */
+  background-size: cover;
+  /* Ensures the background covers the full screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95.6vh;
+  width: 100%;
+  font-family: Poppins;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  padding-top: 79px;
+
+}
+
+.rectangle35 span {
+  color: #F0AE32;
+}
+
+.rectangle35 .midtext {
+  font-family: Poppins;
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.09em;
+  text-align: center;
+
+  padding: 44px 140px;
+}
+
+/* styling of th last text on background image====== */
+.rectangle35 .terminaltext {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.09em;
+  text-align: center;
+
+
+}
+
+
+
+/* =================styling of the footer.jsx page================== */
+.container-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 15px 15px;
+  padding: 50px 170px;
+  position: relative;
+  bottom: 110px;
+}
+
+.itams {
+  border: 1px solid #D4D4D4;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.footertext {
+  display: flex;
+  flex-direction: column;
+}
+
+.text1 {
+  padding: 15px 54px 68px 15px;
+}
+
+.text2 {
+  padding: 15px 15px 68px 16px;
+}
+
+.text3 {
+  padding: 15px 52px 68px 14px;
+}
+
+.text4 {
+  padding: 17px 16px 90px 15px;
+}
+
+.text5 {
+  padding: 15px 16px 69px 15px;
+}
+
+.text6 {
+  padding: 16px 86px 44px 10px;
+}
+
+.icon {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding: 05px 191px 8px 15px;
+  color: #D7A034;
+  cursor: pointer;
+}
+
+/*================= stylying read post text and edit icon of 4th card ========== */
+.icon .editicon {
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+  padding-top: 5px;
+
+}
+
+.copyright {
+  width: 100%;
+  height: 13vh;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  align-content: center;
+
+}
+
+@media only screen and (max-width:1024px) {
+  .hero-content h1 {
+    font-size: 95px;
+    line-height: 100px;
+  }
+
+  .fourth-text1 {
+    padding-top: 10px;
+  }
+
+  .arrowpic {
+    width: 65%;
+  }
+
+  .arrowtext {
+    font-size: 35px;
+  }
+
+  input {
+    height: 11vh;
+  }
+
+  .maindiv {
+    margin-left: 20px;
+  }
+
+  .child-div {
+    width: 603px;
+    padding-left: 20px;
+    padding-right: 90px;
+  }
+
+  .girlpic-bottom {
+    display: none;
+    left: 230px;
+  }
+
+  .rectangle58 {
+    width: 56%;
+  }
+
+  .child2 .para-span2 {
+    padding: 0px 16px 14px 29px;
+  }
+
+  .heading-p {
+    gap: 23px;
+  }
+
+  .child1 {
+    flex-direction: column;
+  }
+
+  .babypic-top {
+    bottom: 250px;
+  }
+
+  .babypic-bottom {
+    left: 230px;
+  }
+
+  .footertext {
+    padding-bottom: 36px;
+  }
+
+  .curve .curvetext {
+    padding: 135px 167px 80px 167px;
+  }
+
+  .section {
+    padding: 0px 50px 85px 50px;
+  }
+
+  .set {
+    width: 95%;
+  }
+
+  .container-grid {
+    bottom: 75px;
+  }
+}
+
+
+
+@media screen and (max-width:786px) {
+
+  .hero-content h1 {
+    font-size: 50px;
+    line-height: 72px;
+  }
+
+  .first-text {
+    font-size: 14px;
+
+  }
+
+  .secondtext {
+    line-height: 22px;
+    font-size: 23px;
+  }
+
+  .thirdtext {
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .fourth-text1 {
+    font-size: 15px;
+    padding-top: 12px;
+  }
+
+  .fourth-text {
+    font-size: 15px;
+  }
+
+  .hero-content button {
+    padding: 8px 30px;
+    margin-top: 16px;
+  }
+
+  .background .content {
+    font-size: 11px;
+    line-height: 18px;
+    padding: 0%;
+    margin-left: 190px;
+    margin-top: 15px;
+  }
+
+  .arrowtext {
+    margin-right: -40px;
+    font-size: 22px;
+    padding-top: 2px;
+  }
+
+  .arrowpic {
+    width: 59%;
+  }
+
+  .below {
+    font-size: 11px;
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 190px;
+  }
+
+  input {
+    height: 7vh;
+    width: 53vh;
+  }
+
+  .download {
+    height: 7vh;
+    width: 53vh;
+  }
+
+  .rectangle52 {
+    margin-top: -2%;
+  }
+
+  .belowform {
+    font-size: 24px;
+    padding-top: 46px;
+  }
+
+  .belowform1 {
+    font-size: 42px;
+    line-height: 49px;
+  }
+
+  .maindiv {
+    margin-left: 28px;
+  }
+
+  .child-div {
+    padding-left: 11px;
+    padding-right: 192px;
+  }
+
+  .rectangle58 {
+    width: 50%;
+    top: 103px;
+    margin-left: -190px;
+  }
+
+  .child-div span {
+    font-size: 13px;
+  }
+
+
+  /* css for responsiveness of empowers.jsx section============ */
+
+
+
+  .maincontainer {
+    align-items: center;
+    padding: 95px 3px 21px 30px;
+  }
+
+  .child1 {
+    padding: 45px 31px 0px 17px;
+  }
+
+  .girlpic {
+    width: 144%;
+  }
+
+  .girlpic-bottom {
+    bottom: 87px;
+    left: 261px;
+  }
+
+  .heading-p {
+    gap: 23px;
+    padding-left: 86px;
+  }
+
+  .big-div .heading-span {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .heading-p .para-span {
+    font-size: 10px;
+    line-height: 19px;
+  }
+
+  .child2 .para-span2 {
+    font-size: 10px;
+    line-height: 28px;
+    padding: 31px 28px 17px 38px;
+  }
+
+  .babypic-top {
+    bottom: 239px;
+    right: 7px;
+  }
+
+  .babypic-bottom {
+    left: 220px;
+    bottom: 86px;
+  }
+
+  .maincard {
+    margin-top: 106px;
+  }
+
+  .brian {
+    font-size: 95px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 21px 26px 31px 28px;
+  }
+
+  .card .firstp {
+    padding: 5px 5px 10px 4px;
+  }
+
+  .card .firstp p {
+    line-height: 21px;
+    font-size: 13px;
+  }
+
+  .card .secondp {
+    margin-top: -10px;
+  }
+
+  .card .secondp p {
+    font-size: 31px;
+    line-height: 39px;
+  }
+
+  .thirdp {
+    margin-top: 1px;
+    font-size: 18px;
+  }
+
+  .card .fourthp {
+    padding-left: 6px;
+    padding-right: 0px;
+  }
+
+  .card .fourthp p span {
+    font-size: 11px;
+    gap: 12px;
+    margin-top: 20px;
+    line-height: 26px;
+  }
+
+  .whitetext,
+  .bluetext {
+    font-size: 65px;
+    line-height: 60px;
+  }
+
+  .whitetext {
+    padding-top: 140px;
+  }
+
+  .yellowtext {
+    padding: 24px 96px 42px 93px;
+    font-size: 20px;
+    line-height: 34px;
+  }
+
+  .curve .curvetext {
+    padding: 145px 81px 0px 81px;
+  }
+
+  .curvetext p {
+    font-size: 25px;
+    line-height: 46px;
+  }
+
+  .yellowspan,
+  .whitespan {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .whitespan2 {
+    font-size: 17px;
+    line-height: 14px;
+  }
+
+  .divp2 {
+    padding: 14px 0px;
+  }
+
+  .divp2 .p2 {
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 36px 37px 50px 26px;
+  }
+
+  .rectangle27 {
+    width: 100%;
+  }
+
+  .headingdiv {
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  .paragraph-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .clickhere button {
+    font-size: 13px;
+    line-height: 12px;
+    padding: 12px 10px;
+  }
+
+  .uppercardtext p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .id .ioperson {
+    width: 35px;
+    height: 35px;
+  }
+
+  .threecards .firstcards {
+    padding: 24px 12px 20px 14px;
+    font-size: 15px;
+    line-height: 37px;
+  }
+
+  .spantext {
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .firstcards .spans {
+    padding-top: 15px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .testimonials {
+    padding-top: 40px;
+  }
+
+  .testimonials button {
+    padding: 5px 9px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .associations {
+    font-size: 20px;
+  }
+
+  .tex {
+    font-size: 50px;
+    line-height: 95px;
+  }
+
+  .textdiv,
+  .textdiv2 {
+    font-size: 50px;
+    line-height: 35px;
+  }
+
+  .textdiv span {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .text .yellowt {
+    font-size: 45px;
+    line-height: 47px;
+  }
+
+  .yellowbtn,
+  .yellowbtn2 {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 6px;
+  }
+
+  .textdiv2 span {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .rectangle35 {
+    font-size: 70px;
+    line-height: 60px;
+    padding-top: 60px;
+  }
+
+  .rectangle35 .midtext {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 30px 110px;
+  }
+
+  .rectangle35 .terminaltext {
+    font-size: 14px;
+  }
+
+  .container-grid {
+    grid-template-columns: 33% 33% 33%;
+    gap: 15px 6px;
+    bottom: 90px;
+    padding: 50px 15px;
+  }
+
+  .text1,
+  .text2,
+  .text3,
+  .text4,
+  .text5,
+  .text6 {
+    padding: 10px 30px 27px 12px;
+  }
+
+  .itams {
+    font-size: 13px;
+  }
+
+  .icon {
+    padding: 05px 60px 6px 6px;
+    font-size: 15px;
+  }
+
+  .set {
+    width: 100%;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width:736px) {
+  .girlpic-bottom {
+    bottom: 86px;
+    left: 240px;
+  }
+}
+
+@media only screen and (max-width:700px) {
+  .child-div {
+    padding-right: 152px;
+  }
+
+  .girlpic-bottom {
+    bottom: 85px;
+    left: 225px;
+  }
+
+  .babypic-top {
+    bottom: 225px;
+    right: 7px;
+  }
+
+  .babypic-bottom {
+    left: 204px;
+    bottom: 85px;
+  }
+
+  .child-div span {
+    margin-top: 18px;
+  }
+
+  .readmorebtn {
+    margin-top: 27px;
+  }
+
+  .rectangle58 {
+    width: 55%;
+    margin-left: -160px;
+  }
+
+
+}
+
+@media only screen and (max-width:660px) {
+  .babypic-bottom {
+    left: 202px;
+    bottom: 84px;
+  }
+
+  .girlpic-bottom {
+    bottom: 85px;
+    left: 206px;
+  }
+
+  .heading-p {
+    gap: 16px;
+    padding-left: 79px;
+  }
+
+  .babypic-bottom {
+    left: 192px;
+    bottom: 84px;
+  }
+
+  .babypic-top {
+    bottom: 221px;
+    right: 7px;
+  }
+
+  .child2 .para-span2 {
+
+    padding: 19px 28px 24px 20px;
+  }
+
+  .brian {
+    font-size: 70px;
+    line-height: 32px;
+  }
+
+  .card .fourthp p span {
+    font-size: 10px;
+    gap: 8px;
+    margin-top: 13px;
+    line-height: 26px;
+  }
+
+  .uppercardtext p {
+    font-size: 24px;
+    line-height: 21px;
+    padding-bottom: 15px;
+  }
+
+  .threecards .firstcards {
+    font-size: 12px;
+    line-height: 29px;
+  }
+
+  .yellowbtn,
+  .yellowbtn2 {
+    font-size: 13px;
+    line-height: 15px;
+    padding: 1px;
+  }
+
+  .textdiv,
+  .textdiv2 {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .rectangle35 {
+    font-size: 57px;
+    line-height: 50px;
+    padding-top: 57px;
+  }
+
+  .rectangle35 .midtext {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 74px;
+  }
+}
+
+@media only screen and (max-width:600px) {
+
+
+  .arrowpic {
+    width: 73%;
+  }
+
+  .background .content,
+  .below {
+    text-align: center;
+    margin-left: 85px;
+  }
+
+  .rectangle52 {
+    margin-top: 1%;
+    width: 55%;
+  }
+
+  .arrowtext {
+    font-size: 18px;
+
+  }
+
+  input,
+  .download {
+    height: 7vh;
+    width: 44vh;
+  }
+
+  .maindiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .child-div {
+    padding-right: 0px;
+
+    padding-left: 20px;
+  }
+
+  .child-div span {
+    margin-top: 40px;
+  }
+
+  .rectangle58 {
+    display: none;
+  }
+
+  .belowform1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .belowform {
+    font-size: 19px;
+    padding-top: 40px;
+  }
+
+  .maindiv {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .girlpic-bottom {
+    bottom: 85px;
+    left: 188px;
+  }
+
+  .heading-p .para-span {
+    font-size: 9px;
+    line-height: 18px;
+  }
+
+  .babypic-top {
+    bottom: 207px;
+    right: 7px;
+  }
+
+  .babypic-bottom {
+    left: 181px;
+    bottom: 84px;
+  }
+
+  .child2 {
+    padding-top: 34px;
+  }
+
+  .child2 .para-span2 {
+    font-size: 09px;
+    line-height: 26px;
+    padding: 5px 15px 17px 17px;
+  }
+
+  .brian {
+    line-height: 33px;
+    font-size: 50px;
+  }
+
+  .maincard {
+    grid-template-columns: 22% 78%;
+  }
+
+  .card {
+    padding: 21px 15px 31px 19px;
+
+  }
+
+  .card .fourthp {
+    padding-left: 13px;
+    padding-right: 0px;
+
+  }
+
+  .threecards .firstcards {
+    font-size: 10px;
+    line-height: 25px;
+  }
+
+  .firstcards .spans {
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .tex {
+    font-size: 43px;
+    line-height: 70px;
+  }
+
+  .textdiv .yellowt {
+    font-size: 37px;
+    line-height: 32px;
+  }
+
+  .textbtn {
+    margin-left: 0;
+  }
+
+  .textdiv2 .bluesmallspan {
+    font-size: 25px;
+  }
+
+  .textdiv2 span {
+    font-size: 25px;
+    line-height: 23px;
+  }
+
+  .child-div {
+    width: 530px;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width:560px) {
+  .form {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .rectangle52 {
+    width: 90%;
+  }
+
+  input,
+  .download {
+    width: 59vh;
+    height: 6.5vh;
+  }
+
+
+
+  .girlpic-bottom {
+    bottom: 76px;
+    left: 165px;
+  }
+
+  .babypic-bottom {
+    left: 163px;
+    bottom: 84px;
+  }
+
+  .babypic-top {
+    bottom: 198px;
+    right: -1px;
+  }
+
+  .brian {
+    line-height: 15px;
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .child-div {
+    width: 465px;
+  }
+
+  .belowform1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .belowform1 {
+
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+
+  .belowform {
+    font-size: 17px;
+    padding-top: 51px;
+    line-height: 13px;
+  }
+
+  .maincontainer {
+    padding: 67px 4px 21px 10px;
+  }
+
+  .child1 {
+    padding: 0%;
+    flex-direction: column;
+  }
+
+  .girlpic {
+    width: 100%;
+
+  }
+
+
+
+  .girlpic-bottom {
+    bottom: 98px;
+    left: 319px;
+  }
+
+  .heading-p {
+    padding-left: 20px;
+  }
+
+  .big-div .heading-span {
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  .heading-p .para-span {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .child2 {
+    flex-direction: column-reverse;
+  }
+
+  .babypic-top {
+    bottom: 299px;
+    right: 0px;
+  }
+
+  .babypic-bottom {
+    left: 318px;
+    bottom: 98px;
+  }
+
+  .child2 .para-span2 {
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: -57px;
+  }
+
+  .card .fourthp p span {
+    font-size: 13px;
+
+    margin-top: 13px;
+    line-height: 28px;
+  }
+
+  .whitetext,
+  .bluetext {
+    font-size: 47px;
+    line-height: 43px;
+  }
+
+  .yellowtext {
+    padding: 24px 61px 42px 44px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .curve .curvetext {
+    padding: 132px 50px 0px 50px;
+  }
+
+  .yellowspan {
+    font-size: 23px;
+    line-height: 7px;
+  }
+
+  .whitespan {
+    line-height: 1px;
+  }
+
+  .divp2 {
+    padding-top: 0px;
+  }
+
+  .divp2 .p2 {
+    font-size: 16px;
+  }
+
+  .whitespan2 {
+    padding-bottom: 12px;
+  }
+
+  .section {
+    flex-direction: column;
+
+    padding: 36px 0px 50px 26px;
+
+  }
+
+  .textmaindiv {
+    padding-left: 17px;
+  }
+
+  .headingdiv {
+    font-size: 35px;
+    line-height: 44px;
+  }
+
+  .paragraph-text {
+    padding-right: 50px;
+    font-size: 17px;
+    line-height: 45px;
+  }
+
+  .clickhere button {
+    font-size: 15px;
+    line-height: 17px;
+    padding: 12px 10px;
+  }
+
+  .threecards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .threecards .firstcards {
+    font-size: 14px;
+    line-height: 39px;
+    padding: 24px 60px 20px 60px;
+    gap: 40px;
+    margin: 25px;
+    margin: 54px;
+  }
+
+  .firstcards .spans {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  .spantext {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .id {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .container-grid {
+    grid-template-columns: 50% 50%;
+    gap: 15px 10px;
+    bottom: 40px;
+    padding: 50px 15px;
+    margin: 30px 15px;
+  }
+
+  .brian {
+    line-height: 10px;
+    font-size: 24px;
+  }
+
+  .maincard {
+    grid-template-columns: 15% 85%;
+    font-weight: 500;
+  }
+
+  .tex {
+    font-size: 37px;
+    line-height: 57px;
+  }
+
+  .yellowbtn,
+  .yellowbtn2 {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px;
+  }
+
+  .rectangle35 {
+    font-size: 50px;
+    line-height: 44px;
+    padding-top: 57px;
+  }
+
+  .rectangle35 .midtext {
+    font-size: 19px;
+    line-height: 28px;
+    padding: 48px 95px;
+  }
+
+  .logo {
+    width: 28%;
+  }
+
+  .testimonials {
+    padding-top: 0px;
+  }
+
+}
+
+@media only screen and (max-width:450px) {
+  .child-div {
+    padding-right: 0px;
+    padding-left: 14px;
+    width: 430px;
+  }
+
+  .girlpic-bottom {
+    bottom: 98px;
+    left: 355px;
+  }
+
+  .babypic-top {
+    bottom: 273px;
+    right: 0px;
+  }
+
+  .babypic-bottom {
+    left: 273px;
+    bottom: 98px;
+  }
+
+  .rectangle35 .midtext {
+    font-size: 17px;
+    line-height: 28px;
+    padding: 18px 85px;
+  }
+
+  .yellowspan {
+    font-size: 23px;
+    line-height: 24px;
+  }
+
+  .curvetext p {
+    font-size: 15px;
+    line-height: 38px;
+  }
+
+  .whitespan {
+    line-height: 0px;
+    font-size: 19px;
+  }
+
+  .yellowspan {
+    font-size: 19px;
+    line-height: 20px;
+  }
+
+  .whitespan2 {
+    font-size: 15px;
+    line-height: 7px;
+  }
+
+  .threecards .firstcards {
+    font-size: 14px;
+    line-height: 30px;
+    padding: 24px 45px 20px 47px;
+    gap: 25px;
+  }
+
+  .menu-items {
+    gap: 12px;
+  }
+}
+
+@media only screen and (max-width:430px) {
+  .girlpic-bottom {
+    bottom: 98px;
+    left: 319px;
+  }
+
+  .child-div {
+    width: 420px;
+  }
+
+  .babypic-top {
+    bottom: 258px;
+    right: 0px;
+  }
+
+  .babypic-bottom {
+    left: 251px;
+    bottom: 98px;
+  }
+
+  .paragraph-text {
+    padding-right: 55px;
+    font-size: 15px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (max-width:375px) {
+  .girlpic-bottom {
+    bottom: 88px;
+    left: 276px;
+  }
+
+  .babypic-top {
+    bottom: 229px;
+    right: 0px;
+  }
+
+  .babypic-bottom {
+    left: 204px;
+    bottom: 86px;
+  }
+
+  .brian {
+    line-height: 10px;
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 21px 0px 31px 3px;
+  }
+
+  .child-div {
+
+    width: 353px;
+  }
+
+  .child-div span {
+    font-size: 15px;
+  }
+
+  .child-div span {
+    margin-top: 20px;
+  }
+
+  .container-grid {
+    grid-template-columns: 90%;
+    gap: 12px 13px;
+    bottom: 40px;
+    padding: 50px 0px;
+    margin: 30px 7px;
+  }
+
+  .rectangle35 .midtext {
+    font-size: 17px;
+    line-height: 28px;
+    padding: 50px 55px;
+  }
+
+  .arrowtext {
+    font-size: 16px;
+  }
+
+  .background .content {
+    font-size: 11px;
+    line-height: 18px;
+    margin-left: auto;
+  }
+
+  .background .below {
+    margin: auto;
+    display: block;
+  }
+
+  input,
+  .download {
+    width: 48vh;
+    height: 6.5vh;
+  }
+
+  .copyright {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width:320px) {
+  .girlpic-bottom {
+    bottom: 88px;
+    left: 240px;
+  }
+
+  .babypic-top {
+    bottom: 195px;
+    right: 0px;
+  }
+
+  .babypic-bottom {
+    left: 154px;
+    bottom: 86px;
+  }
+
+  .curvetext p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .whitespan2 {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .curve .curvetext {
+    padding: 103px 35px 0px 35px;
+  }
+
+  .headingdiv {
+    font-size: 31px;
+    line-height: 38px;
+  }
+
+  .paragraph-text {
+    padding-right: 55px;
+    font-size: 13px;
+    line-height: 32px;
+  }
+
+  .clickhere button {
+    font-size: 14px;
+    line-height: 15px;
+    padding: 7px 8px;
+  }
+
+  .threecards .firstcards {
+    font-size: 12px;
+    line-height: 30px;
+    padding: 18px 15px 0px 15px;
+    gap: 0px;
+    margin: 19px;
+  }
+
+  .child-div {
+    width: 301px;
+  }
+
+  .child-div span {
+    font-size: 15px;
+  }
+
+  .child-div span {
+    font-size: 12px;
+  }
+
+  .copyright {
+    font-size: 8px;
+    line-height: 18px;
+  }
+
+}
+
+/* =================lets apply media quries for th eresponsiveness====== */
