@@ -828,7 +828,7 @@ input {
   margin-left: 753px;
 }
 
- 
+
 
 .bluerectangle {
   height: 100%;
@@ -1535,6 +1535,10 @@ input {
     line-height: 100px;
   }
 
+  .menu-items {
+    gap: 18px;
+  }
+
   .fourth-text1 {
     padding-top: 10px;
   }
@@ -1732,9 +1736,7 @@ input {
     padding: 45px 31px 0px 17px;
   }
 
-  .girlpic {
-    width: 144%;
-  }
+
 
   .girlpic-bottom {
     bottom: 87px;
@@ -1743,7 +1745,7 @@ input {
 
   .heading-p {
     gap: 23px;
-    padding-left: 86px;
+    padding-left: 20px;
   }
 
   .big-div .heading-span {
@@ -2286,10 +2288,6 @@ input {
     width: 530px;
   }
 }
-
-
-
-
 
 @media only screen and (max-width:560px) {
   .form {
